@@ -36,15 +36,15 @@
 
       <div id="add-template" style="display: none;">
         <form class="bartender-info">
-          <input class="name-box" type="text" name="firstname" placeholder="Add Bartender name here" autofocus> worked <input class="hours-box" type="text" name="hours" placeholder="Enter hours worked" required>
+          <input class="name-box" type="text" name="firstname" placeholder="Add Bartender name here" autofocus> worked <input class="hours-box" type="text" name="hours" placeholder="Enter hours worked"> <a href="" id="remove-button">Remove</a> 
         </form>
       </div>
 
       <button class="add-button">Add another bartender</button>
       <br><br>
-      <button class="calc-button">I'm finished adding bartenders. Now calculate those tips!</button>
+      <button class="calc-button">Calculate Everyone's Tips!</button>
 
-      <ul id='result-list'></ul>
+      <ul id='error-list'></ul>
 
 
       <!-- templates -->
@@ -59,7 +59,7 @@
 
 
       <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
 

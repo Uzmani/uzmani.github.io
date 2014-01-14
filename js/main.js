@@ -1,27 +1,9 @@
 $(document).ready(function(){
   addBartender();
-  $("#total").validate({
-    rules: {
-      totaltips: {
-        required: true,
-        digits: true
-      }
-    }
-  });
-  $("form").each(function() {
-    $(this).validate({
-      rules: {
-        hours: {
-          required: true,
-          digits: true
-        }
-      }
-    });
-  });
-
-  $("#bartender-info").on('mouseover', renderRemoveButton)
+  // $("#bartender-info").on('mouseover', renderRemoveButton)
   $(".add-button").on("click", addBartender)
   $(".calc-button").on("click", calcTips)
+  $("#remove-button").on("click", function(e) {removeBartender(e)})
 });
 
 var bartenders = []
@@ -32,7 +14,18 @@ function Bartender(firstname, hrs) {
   this.tipsOwed = 0;
 }
 
-function addHours(){
+function validateTotal() {
+  $("#total").validate({
+    rules: {
+      totaltips: {
+        required: true,
+        digits: true
+      }
+    }
+  });
+}
+
+function addHours(){  
   var sumHours = 0
   for(var i=0; i<bartenders.length; i++) {
     var hoursInteger = bartenders[i].hrs
@@ -42,23 +35,28 @@ function addHours(){
 }
 
 function calcTips() { 
+  $('#error-list').empty();
   $('#name').remove();
   bartenders = [];
   createBartenders();
   var totalTips = $('input[name="totaltips"]').val();
-  var hoursAdded = addHours(bartenders);
-  var rate = totalTips / hoursAdded;
-  for (var i=0; i<bartenders.length; i++) {  
-    bartenders[i].tipsOwed = Math.round((bartenders[i].hrs * rate)*100)/100
-  } 
-  renderResults();
+  var hoursAdded = addHours();
+  if (isNaN(hoursAdded) || isNaN(totalTips)) {
+    $('#error-list').append("<li>Hours or Dollar entry must be a number</li>"); 
+  }else {
+    var rate = totalTips / hoursAdded;
+    for (var i=0; i<bartenders.length; i++) {  
+      bartenders[i].tipsOwed = Math.round((bartenders[i].hrs * rate)*100)/100
+    } 
+    renderResults();
+  }  
 }
 
 function createBartenders() {
   $('#bartender-to-add .bartender-info').each(function() {
     var name = $(this).find('input').val();
     var hrs = $(this).find('input').eq(1).val();
-    if (name === '' || hrs === '') {
+    if (name === '' && hrs === '') {
       return true; 
     }else {
       bartenders.push(new Bartender(name, hrs));
@@ -71,9 +69,16 @@ function addBartender(){
   $("#bartender-to-add").append(addBartenderTemplate);
 }
 
-function renderRemoveButton() {
-  console.log("moused over")
+function removeBartender(e) {
+  e.preventDefault();
+  console.log(this);
+  console.log("attempt to remove bartender");
+  $(this).closest("#bartender-info").remove();
 }
+
+// function renderRemoveButton() {
+//   console.log("moused over")
+// }
 
 function renderResults(){
   var source =  $('#render-results').html();

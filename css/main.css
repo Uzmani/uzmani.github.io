@@ -129,9 +129,21 @@ textarea {
 }
 
 label.error {
-color: red;
-padding-left: 16px;
-margin-left: .3em;
+  color: red;
+  padding-left: 16px;
+  margin-left: .3em;
+}
+
+#error-list li {
+  color: red;
+}
+
+/*Remove bartenter button*/
+#remove-button {
+  color: red;
+  font-size: .75em;
+  margin-left: 5px;
+  text-decoration: none;
 }
 
 
