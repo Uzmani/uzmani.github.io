@@ -159,6 +159,12 @@ input {
 .hours-box {
   width: 45px;
   height: 25px;
+  margin-right: 1px;
+}
+
+#dollar-sign {
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 #total-pool {
@@ -176,6 +182,7 @@ input {
 
 .errors {
   background-color: pink;
+  border-radius: 5px;
   height: 40px;
   width: 100%;
   text-decoration: none;

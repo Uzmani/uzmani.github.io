@@ -25,7 +25,11 @@ function addHours(){
   var sumHours = 0
   for(var i=0; i<bartenders.length; i++) {
     var hoursInteger = bartenders[i].hrs
-    sumHours += parseFloat(hoursInteger);
+    if (isNaN(bartenders[i].hrs)){
+      renderNumError();
+    }else {
+      sumHours += parseFloat(hoursInteger);
+    }
   }
   return sumHours
 }
@@ -38,16 +42,28 @@ function calcTips() {
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
   if (isNaN(hoursAdded) || isNaN(totalTips) || totalTips === '') {
-    $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/red_close_button.png'></div>"); 
+    renderError(); 
   }else {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  
       bartenders[i].tipsOwed = Math.round((bartenders[i].hrs * rate)*100)/100
+      // if (isNaN(bartenders[i].tipsOwed)) {
+      //   renderNumError();
+      // } 
     } 
     renderResults();
   }  
 }
 
+function renderError() {
+  $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/red_close_button.png'></div>");
+  $('#name').remove(); 
+}
+
+function renderNumError() {
+  $('#error-list').append("<div class='errors's>Numbers only required for Hours <img class='close-error-btn' src='img/red_close_button.png'></div>");
+  $('#name').remove();   
+}
 
 function createBartenders() {
   $('#bartender-to-add .bartender-info').each(function() {
