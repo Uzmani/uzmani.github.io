@@ -113,14 +113,13 @@ input {
 /*Header styles */
 #heading {
   background-color: #102e37;
-  height: 50px;
   line-height: 50px;
   -moz-box-shadow:    3px 3px 10px 8px #ccc;
   -webkit-box-shadow: 3px 3px 10px 8px #ccc;
   box-shadow:         3px 3px 10px 8px #ccb;
 }
 
-#heading h1 {
+#heading h2 {
   font-family: 'Exo 2', sans-serif;
   font-weight: 400;
   margin:0;
@@ -165,7 +164,7 @@ input {
 #total-pool {
   width: 178px;
   height: 25px;
-  margin: 20px 0 0 4px;
+  margin: 25px 0 0 4px;
 
 }
 
