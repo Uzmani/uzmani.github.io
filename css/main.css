@@ -169,21 +169,9 @@ input {
 }
 
 /*validation errors*/
-/*.error {
- border-color:red;
- border-width:3px;
- border-radius: 5px;
-}
-
-label.error {
-  color: red;
-  padding-left: 16px;
-  margin-left: .3em;
-}*/
 
 #error-list {
   margin-bottom: 8px;
-  
 }
 
 .errors {
@@ -193,7 +181,6 @@ label.error {
   text-decoration: none;
   color: red;
   line-height: 40px;
-  
   font-size: 1em
 }
 
@@ -206,9 +193,6 @@ label.error {
   vertical-align: middle;
 }
 
-.close-error-btn p {
-
-}
 
 /*Add bartender button*/
 #add-button {
@@ -244,12 +228,10 @@ label.error {
   font-size: 1.2em;
   background-color: #F78D3F;
   border-radius: 5px;
-  font-size: 1.2em;
-  font-weight: bold;
   color: white;
   width: 97%;
   height: 50px;
-  margin-left: 4px;
+  margin: 4px 4px;
 }
 
 /*Placeholder styles*/

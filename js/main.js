@@ -37,7 +37,6 @@ function calcTips() {
   createBartenders();
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
-  validateInput(totalTips, hoursAdded);
   if (isNaN(hoursAdded) || isNaN(totalTips) || totalTips === '') {
     $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/red_close_button.png'></div>"); 
   }else {
