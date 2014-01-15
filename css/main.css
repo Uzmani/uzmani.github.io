@@ -99,7 +99,7 @@ textarea {
 
 body {
   background-color: #E8EDE0;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 #container {
@@ -108,11 +108,16 @@ body {
 /*Header styles */
 #heading {
   background-color: #102e37;
-  height: 80px;
-  line-height: 80px;
-
+  height: 50px;
+  line-height: 50px;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 15px 6px #ccb;
 }
+
 #heading h1 {
+  margin:0;
+  padding:0;
   color: #fff;
 }
 
@@ -128,21 +133,27 @@ body {
 }
 
 /* input box styles */
+
+
 .bartender-info {
-  margin-bottom: 8px;
+  margin: 0 0 8px 15px;
 }
 
 .name-box {
   width: 110px;
+  height: 25px;
 }
   
 .hours-box {
   width: 45px;
+  height: 25px;
 }
 
 #total-pool {
   width: 175px;
-  margin-top: 10px;
+  height: 25px;
+  margin: 20px 0 0 4px;
+
 }
 
 /*validation errors*/
@@ -190,16 +201,23 @@ label.error {
 /*Add bartender button*/
 #add-button {
   background-color: #52D017;
-  height: 30px;
+  height: 35px;
   border-style: none;
   font-weight: bold;
   color: white;
+  margin: 0 0 0 15px;
+  border-radius: 5px;
+}
+
+#add-button img {
+  width: 30px;
+  margin: 0 3px 0 0;
 }
 
 /*Remove bartenter button*/
 
-img {
-  height: 28px;
+.remove-button {
+  height: 30px;
   margin-left: 5px;
 }
 
@@ -207,10 +225,13 @@ img {
 .calc-button {
   background-color: #F78D3F;
   border-style: none;
+  border-radius: 5px;
+  font-size: 1.2em;
   font-weight: bold;
   color: white;
-  width: 100%;
-  height: 35px;
+  width: 97%;
+  height: 50px;
+  margin-left: 4px;
 }
 
 /*Placeholder styles*/
@@ -218,7 +239,10 @@ img {
 ::-moz-placeholder { font-size: .85em; } /* firefox 19+ */
 :-ms-input-placeholder { font-size: .85em; } /* ie */
 
-
+/* Render Results */
+#name {
+  margin: 5px 0 0 10px;
+}
 
 
 
