@@ -1,14 +1,13 @@
 $(document).ready(function(){
   addBartender();
   // $("#bartender-info").on('mouseover', renderRemoveButton)
-  $(".add-button").on("click", addBartender)
+  $("#add-button").on("click", addBartender)
   $(".calc-button").on("click", calcTips)
   $("#bartender-to-add").on("click", ".remove-button", function(e) {
     e.preventDefault();
     console.log("attempt to remove bartender");
     $(this).closest(".bartender-info").remove();
   })
-  calcTips();
 });
 
 var bartenders = []
@@ -17,17 +16,6 @@ function Bartender(firstname, hrs) {
   this.firstName = firstname;
   this.hrs = hrs;
   this.tipsOwed = 0;
-}
-
-function validateTotal() {
-  $("#total").validate({
-    rules: {
-      totaltips: {
-        required: true,
-        digits: true
-      }
-    }
-  });
 }
 
 function addHours(){  
@@ -47,7 +35,7 @@ function calcTips() {
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
   if (isNaN(hoursAdded) || isNaN(totalTips)) {
-    $('#error-list').append("<li>Total Tips and Hours is required and must be a number</li>"); 
+    $('#error-list').append("<li>Total Tips and Hours is required (must be a number)</li>"); 
   }else {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  

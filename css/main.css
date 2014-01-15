@@ -97,6 +97,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+  background-color: #E8EDE0;
+}
+
+/*Header styles */
+#heading {
+  background-color: #102e37;
+  height: 80px;
+
+}
+#heading h1 {
+  color: #fff;
+}
+
 /* results styles */
 #first-name {
     font-size: 1.5em;
@@ -142,16 +156,23 @@ label.error {
   color: red;
 }
 
-/*Remove bartenter button*/
-.remove-button {
-  color: red;
-  font-size: .75em;
-  margin-left: 5px;
-  text-decoration: none;
+/*Add bartender button*/
+#add-button {
+  background-color: #52D017;
+  border-style: none;
+  font-weight: bold;
+  color: white;
 }
+
+/*Remove bartenter button*/
 
 img {
   height: 25px;
+}
+
+/*Calculate tips button */
+.calc-button {
+  background-color: #;
 }
 
 /*Placeholder styles*/
