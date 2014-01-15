@@ -99,12 +99,17 @@ textarea {
 
 body {
   background-color: #E8EDE0;
+  margin: 0px auto;
 }
 
+#container {
+  margin: 0 auto;
+}
 /*Header styles */
 #heading {
   background-color: #102e37;
   height: 80px;
+  line-height: 80px;
 
 }
 #heading h1 {
@@ -137,6 +142,7 @@ body {
 
 #total-pool {
   width: 175px;
+  margin-top: 10px;
 }
 
 /*validation errors*/
