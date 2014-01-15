@@ -159,6 +159,7 @@ label.error {
 /*Add bartender button*/
 #add-button {
   background-color: #52D017;
+  height: 35px;
   border-style: none;
   font-weight: bold;
   color: white;
