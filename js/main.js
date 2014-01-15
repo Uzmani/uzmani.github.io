@@ -5,8 +5,11 @@ $(document).ready(function(){
   $(".calc-button").on("click", calcTips)
   $("#bartender-to-add").on("click", ".remove-button", function(e) {
     e.preventDefault();
-    console.log("attempt to remove bartender");
     $(this).closest(".bartender-info").remove();
+  })
+  $("#error-list").on("click", ".close-error-btn", function(e){
+    e.preventDefault();
+    $(this).closest(".errors").remove();
   })
 });
 
@@ -34,8 +37,8 @@ function calcTips() {
   createBartenders();
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
-  if (isNaN(hoursAdded) || isNaN(totalTips)) {
-    $('#error-list').append("<div class='errors's>Total Tips and Hours are required (must be a number)<img class='close-error-btn' src='img/error_close.jpeg'></div>"); 
+  if (isNaN(hoursAdded) || isNaN(totalTips) || totalTips === '') {
+    $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/red-close-button.png'></div>"); 
   }else {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  
