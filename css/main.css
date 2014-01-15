@@ -109,12 +109,16 @@ textarea {
 }
 
 /* input box styles */
+.bartender-info {
+  margin-bottom: 8px;
+}
+
 .name-box {
   width: 150px;
 }
   
 .hours-box {
-  width: 50px;
+  width: 45px;
 }
 
 #total-pool {
@@ -139,11 +143,15 @@ label.error {
 }
 
 /*Remove bartenter button*/
-#remove-button {
+.remove-button {
   color: red;
   font-size: .75em;
   margin-left: 5px;
   text-decoration: none;
+}
+
+img {
+  height: 30px;
 }
 
 

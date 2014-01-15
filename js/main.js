@@ -3,7 +3,12 @@ $(document).ready(function(){
   // $("#bartender-info").on('mouseover', renderRemoveButton)
   $(".add-button").on("click", addBartender)
   $(".calc-button").on("click", calcTips)
-  $("#remove-button").on("click", function(e) {removeBartender(e)})
+  $("#bartender-to-add").on("click", ".remove-button", function(e) {
+    e.preventDefault();
+    console.log("attempt to remove bartender");
+    $(this).closest(".bartender-info").remove();
+  })
+  calcTips();
 });
 
 var bartenders = []
@@ -35,14 +40,14 @@ function addHours(){
 }
 
 function calcTips() { 
+  bartenders = []
   $('#error-list').empty();
   $('#name').remove();
-  bartenders = [];
   createBartenders();
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
   if (isNaN(hoursAdded) || isNaN(totalTips)) {
-    $('#error-list').append("<li>Total Tips and Hours is required and must be </li>"); 
+    $('#error-list').append("<li>Total Tips and Hours is required and must be a number</li>"); 
   }else {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  
@@ -71,9 +76,8 @@ function addBartender(){
 
 function removeBartender(e) {
   e.preventDefault();
-  console.log(this);
   console.log("attempt to remove bartender");
-  $(this).closest("#bartender-info").remove();
+  $(this).closest(".bartender-info").remove();
 }
 
 // function renderRemoveButton() {
