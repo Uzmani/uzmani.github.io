@@ -102,6 +102,11 @@ body {
   margin: 0px;
 }
 
+input {
+  border-radius: 4px;
+  border-bottom: darkgray;
+}
+
 #container {
   margin: 0 auto;
 }
@@ -110,21 +115,29 @@ body {
   background-color: #102e37;
   height: 50px;
   line-height: 50px;
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 15px 6px #ccb;
+  -moz-box-shadow:    3px 3px 10px 8px #ccc;
+  -webkit-box-shadow: 3px 3px 10px 8px #ccc;
+  box-shadow:         3px 3px 10px 8px #ccb;
 }
 
 #heading h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
   margin:0;
   padding:0;
   color: #fff;
 }
 
+#heading img {
+  position: absolute;
+  height: 50px;
+  top:0;
+  right:0;
+}
+
 /* results styles */
 #first-name {
     font-size: 1.5em;
-
 }
 
 #tips-made {
@@ -150,7 +163,7 @@ body {
 }
 
 #total-pool {
-  width: 175px;
+  width: 178px;
   height: 25px;
   margin: 20px 0 0 4px;
 
@@ -200,10 +213,12 @@ label.error {
 
 /*Add bartender button*/
 #add-button {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
   background-color: #52D017;
-  height: 35px;
-  border-style: none;
-  font-weight: bold;
+  height: 38px;
+  line-height: 30px;
   color: white;
   margin: 0 0 0 15px;
   border-radius: 5px;
@@ -214,6 +229,8 @@ label.error {
   margin: 0 3px 0 0;
 }
 
+
+
 /*Remove bartenter button*/
 
 .remove-button {
@@ -223,8 +240,10 @@ label.error {
 
 /*Calculate tips button */
 .calc-button {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
   background-color: #F78D3F;
-  border-style: none;
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: bold;
