@@ -38,7 +38,7 @@ function calcTips() {
   var totalTips = $('input[name="totaltips"]').val();
   var hoursAdded = addHours();
   if (isNaN(hoursAdded) || isNaN(totalTips) || totalTips === '') {
-    $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/red-close-button.png'></div>"); 
+    $('#error-list').append("<div class='errors's>Total Tips and Hours are required<img class='close-error-btn' src='img/Red-close-button.png'></div>"); 
   }else {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  
