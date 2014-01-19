@@ -6,7 +6,7 @@ $(document).ready(function(){
   $("#bartender-to-add").on("click", ".remove-button", function(e) {
     e.preventDefault();
     $(this).closest(".bartender-info").remove();
-  })
+  });
   $("#error-list").on("click", ".close-error-btn", function(e){
     e.preventDefault();
     $(this).closest(".errors").remove();
@@ -47,9 +47,6 @@ function calcTips() {
     var rate = totalTips / hoursAdded;
     for (var i=0; i<bartenders.length; i++) {  
       bartenders[i].tipsOwed = Math.round((bartenders[i].hrs * rate)*100)/100
-      // if (isNaN(bartenders[i].tipsOwed)) {
-      //   renderNumError();
-      // } 
     } 
     renderResults();
   }  
@@ -82,15 +79,6 @@ function addBartender(){
   $("#bartender-to-add").append(addBartenderTemplate);
 }
 
-function removeBartender(e) {
-  e.preventDefault();
-  console.log("attempt to remove bartender");
-  $(this).closest(".bartender-info").remove();
-}
-
-// function renderRemoveButton() {
-//   console.log("moused over")
-// }
 
 function renderResults(){
   var source =  $('#render-results').html();

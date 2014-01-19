@@ -122,7 +122,7 @@ input {
 #heading h2 {
   font-family: 'Exo 2', sans-serif;
   font-weight: 400;
-  margin:0;
+  margin:0 0 0 10px;
   padding:0;
   color: #fff;
 }
@@ -211,7 +211,8 @@ input {
   line-height: 30px;
   color: white;
   margin: 0 0 0 15px;
-  border-radius: 5px;
+  border-radius: 3px;
+  border-style: none;
 }
 
 #add-button img {
@@ -234,7 +235,8 @@ input {
   font-weight: 700;
   font-size: 1.2em;
   background-color: #F78D3F;
-  border-radius: 5px;
+  border-radius: 3px;
+  border-style: none;
   color: white;
   width: 97%;
   height: 50px;
@@ -249,6 +251,10 @@ input {
 /* Render Results */
 #name {
   margin: 5px 0 0 10px;
+}
+
+#tips-made {
+  color: green;
 }
 
 
