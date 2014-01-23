@@ -230,6 +230,10 @@ input {
 }
 
 /*Calculate tips button */
+#calc-butt {
+  text-align: center;
+}
+
 .calc-button {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
@@ -238,9 +242,8 @@ input {
   border-radius: 3px;
   border-style: none;
   color: white;
-  width: 97%;
+  width: 98%;
   height: 50px;
-  margin: 4px 4px;
 }
 
 /*Placeholder styles*/
