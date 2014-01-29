@@ -82,7 +82,7 @@ CalcController.prototype = {
     },
 
     renderTotalTipsError: function() {
-      $('#error-list').append("<div class='errors's>A number is required for Tip pool amount<img class='close-error-btn' src='img/red_close_button.png'></div>"); 
+      $('#error-list').append("<div class='errors's>Number is required for Tip pool amount<img class='close-error-btn' src='img/red_close_button.png'></div>"); 
     },
 
     renderNegNumberError: function() {
