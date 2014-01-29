@@ -148,6 +148,8 @@ input {
 
 
 .bartender-info {
+  position: relative;
+  left: 1px;
   margin: 0 0 8px 15px;
 }
 
@@ -234,7 +236,7 @@ input {
 }
 
 /*Calculate tips button */
-#calc-butt {
+#calc-butt  {
   text-align: center;
 }
 

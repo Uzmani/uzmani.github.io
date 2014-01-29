@@ -1,4 +1,4 @@
-var CalcController = function(selector) { 
+var CalcController = function() { 
     this.bartenders =[];
 
     var self = this;
@@ -6,11 +6,12 @@ var CalcController = function(selector) {
       $("#add-button").on("click", function(e) { self.addBartender(e) });
       $(".calc-button").on("click", function(e) { self.calcTips(e) });
       $("#bartender-to-add").on("click", ".remove-button", function(e) {
-        e.preventDefault();
-        $(this).closest(".bartender-info").remove();
+        $(this).closest(".bartender-info").animate({ "left": "-=400px" }, 500, function() {
+          $(this).closest(".bartender-info").remove();  
+        });
+        
       });
       $("#error-list").on("click", ".close-error-btn", function(e){
-        e.preventDefault();
         $(this).closest(".errors").remove();
       });
       self.addBartender();
@@ -31,7 +32,6 @@ CalcController.prototype = {
       this.createBartenders();
       var totalTips = $('input[name="totaltips"]').val();
       var hoursAdded = this.addHours();
-      console.log(hoursAdded);
       if (isNaN(totalTips) || totalTips === '') {
         this.renderTotalTipsError();
       } else if(hoursAdded === false) {
@@ -105,7 +105,7 @@ var Bartender = function(firstname, hrs) {
 
 
 $(function() {
-    var pageSetup = new CalcController('#container');
+    var calcSetup = new CalcController();
 });
 
 
