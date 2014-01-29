@@ -235,6 +235,10 @@ input {
   margin-left: 5px;
 }
 
+.remove-button img.hover {
+  height: 35px;
+}
+
 /*Calculate tips button */
 #calc-butt  {
   text-align: center;
