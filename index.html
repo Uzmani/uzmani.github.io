@@ -37,12 +37,9 @@
 
         <div id="bartender-to-add"></div>
 
-        <div id="add-template" style="display: none;">
-          <div class="bartender-info">
-            <input class="name-box" type="text" name="firstname" placeholder="Bartender name"> worked <input class="hours-box" type="text" name="hours" placeholder="Hours"> <img class="remove-button" src="img/list_remove.png" > 
-          </div>
-        </div>
+        
         <div id='error-list'></div>
+        
         <button id="add-button">
           <span><img src="img/add1.png"></span>
           <span class="add-text">Add Another Bartender</span>
@@ -56,7 +53,7 @@
       
 
 
-      <!-- templates -->
+      <!--  Redner template -->
       <script id="render-results" type="text/x-handlebars-template">
         <div id="name">
           {{#people}}
@@ -64,6 +61,13 @@
           {{/people}}
         </div>  
       </script>
+
+      <!-- Add bartender template -->
+      <div id="add-template" style="display: none;">
+          <div class="bartender-info">
+            <input class="name-box" type="text" name="firstname" placeholder="Bartender name"> worked <input class="hours-box" type="text" name="hours" placeholder="Hours"> <img class="remove-button" src="img/list_remove.png" > 
+          </div>
+        </div>
 
 
 
