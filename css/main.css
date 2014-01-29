@@ -206,13 +206,17 @@ input {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 1em;
-  background-color: #52D017;
+  background-color: #4BAB63;
   height: 38px;
   line-height: 30px;
   color: white;
   margin: 0 0 0 15px;
   border-radius: 3px;
   border-style: none;
+}
+
+#add-button:hover {
+  background-color: #52d017;
 }
 
 #add-button img {
@@ -238,12 +242,15 @@ input {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 1.2em;
-  background-color: #F78D3F;
+  background-color: #FA730F;
   border-radius: 3px;
   border-style: none;
   color: white;
   width: 98%;
   height: 50px;
+}
+.calc-button:hover {
+  background-color: #F78D3F;
 }
 
 /*Placeholder styles*/
