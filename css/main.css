@@ -240,7 +240,7 @@ input {
 
 .calc-button {
   font-family: 'Exo 2', sans-serif;
-  font-weight: 700;
+  font-weight: 700; 
   font-size: 1.2em;
   background-color: #FA730F;
   border-radius: 3px;

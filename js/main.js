@@ -93,7 +93,7 @@ CalcController.prototype = {
       var source =  $('#render-results').html();
       var template = Handlebars.compile(source);
       var poolData = { people: this.bartenders }
-      $('body').append(template(poolData));
+      $('body #render-list').append(template(poolData));
     }
 }
 
