@@ -5,11 +5,10 @@ var CalcController = function() {
     function initialize() {     
       $("#add-button").on("click", function(e) { self.addBartender(e) });
       $(".calc-button").on("click", function(e) { self.calcTips(e) });
-      $("#bartender-to-add").on("click", ".remove-button", function(e) {
+      $("#bartender-to-add").on("click", ".remove-button", function() {
         $(this).closest(".bartender-info").animate({ "left": "-=400px" }, 500, function() {
-          $(this).closest(".bartender-info").remove();  
-        });
-        
+          $(this).remove();  
+        });    
       });
       $("#error-list").on("click", ".close-error-btn", function(e){
         $(this).closest(".errors").remove();
@@ -51,8 +50,8 @@ CalcController.prototype = {
       $('#bartender-to-add .bartender-info').each(function() {
         var name = $(this).find('input').val();
         var hrs = $(this).find('input').eq(1).val();
-        console.log(name +' ' + hrs);
         if (name === '' && hrs === '') {
+          // skips entry if user leaves name and hours blank
           return true; 
         }else {
           bartenders.push(new Bartender(name, hrs));
@@ -64,7 +63,7 @@ CalcController.prototype = {
       var sumHours = 0
       for(var i=0; i<this.bartenders.length; i++) {
         var hoursInteger = this.bartenders[i].hrs
-        if (isNaN(this.bartenders[i].hrs)){
+        if (isNaN(hoursInteger) || hoursInteger === ''){
           this.renderNumHoursError();
           return false;
         }else if (this.bartenders[i].hrs < 0){
@@ -78,7 +77,7 @@ CalcController.prototype = {
     },
 
     renderNumHoursError: function() {
-      $('#error-list').append("<div class='errors's>Numbers only required for Hours <img class='close-error-btn' src='img/red_close_button.png'></div>"); 
+      $('#error-list').append("<div class='errors's>Number required for Hours <img class='close-error-btn' src='img/red_close_button.png'></div>"); 
     },
 
     renderTotalTipsError: function() {
