@@ -5,11 +5,11 @@ var CalcController = function() {
     function initialize() {     
       $("#add-button").on("click", function(e) { self.addBartender(e) });
       $(".calc-button").on("click", function(e) { self.calcTips(e) });
-      $("#bartender-to-add").on("click", ".remove-button", function(e) { self.removeBartender(e) });
-      //   $(this).closest(".bartender-info").animate({ "left": "-=400px" }, 500, function() {
-      //     $(this).remove();  
-      //   });    
-      // });
+      $("#bartender-to-add").on("click", ".remove-button", function(e) { 
+        $(this).closest(".bartender-info").animate({ "left": "-=400px" }, 500, function() {
+          $(this).remove();  
+        });    
+      });
       $("#error-list").on("click", ".close-error-btn", function(e){
         $(this).closest(".errors").remove();
       });
@@ -22,16 +22,6 @@ CalcController.prototype = {
     addBartender: function(e) {
         var addBartenderTemplate = $.trim($("#add-template").html());
         $("#bartender-to-add").append(addBartenderTemplate);
-    },
-
-    removeBartender: function(e) {
-      console.log(this);
-      console.log("entered removeBartender function")
-      var self = this
-      console.log(self);
-      $(self).closest(".bartender-info").animate({ "left": "-=400px" }, 500, function() {
-          $(self).remove();  
-        });    
     },
 
     calcTips: function(e) {
