@@ -89,6 +89,7 @@ textarea {
 body {
   background-color: #E8EDE0;
   margin: 0px;
+  font-family: 'helvetica' sans-serif;
 }
 
 input {
@@ -103,9 +104,7 @@ input {
 #heading {
   background-color: #102e37;
   line-height: 50px;
-  -moz-box-shadow:    3px 3px 10px 8px #ccc;
-  -webkit-box-shadow: 3px 3px 10px 8px #ccc;
-  box-shadow:         3px 3px 10px 8px #ccb;
+
 }
 
 #heading h2 {
@@ -123,130 +122,9 @@ input {
   right:0;
 }
 
-/* results styles */
-#first-name {
-    font-size: 1.5em;
-}
-
-#tips-made {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* input box styles */
-
-.bartender-info {
-  position: relative;
-  left: 1px;
-  margin: 0 0 8px 15px;
-}
-
-.name-box {
-  width: 110px;
-  height: 25px;
-}
-  
-.hours-box {
-  width: 45px;
-  height: 25px;
-  margin-right: 1px;
-}
-
-#dollar-sign {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-#total-pool {
-  width: 178px;
-  height: 25px;
-  margin: 25px 0 0 4px;
-
-}
-
-/*validation errors*/
-
-#error-list {
-  margin-bottom: 8px;
-}
-
-.errors {
-  background-color: pink;
-  border-radius: 5px;
-  height: 40px;
-  width: 100%;
-  text-decoration: none;
-  color: red;
-  line-height: 40px;
-  font-size: 1em
-}
-
-.close-error-btn {
-  background: pink;
-  position: absolute;
-  right: 0;
-  height: 39px;
-  text-align: left;
-  vertical-align: middle;
-}
-
-
-/*Add bartender button*/
-#add-button {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 700;
-  font-size: 1em;
-  background-color: #4BAB63;
-  height: 38px;
-  line-height: 30px;
-  color: white;
-  margin: 0 0 0 15px;
-  border-radius: 3px;
-  border-style: none;
-}
-
-#add-button:hover {
-  background-color: #52d017;
-}
-
-#add-button img {
-  width: 30px;
-  margin: 0 3px 0 0;
-}
 
 
 
-/*Remove bartenter button*/
-
-.remove-button {
-  height: 30px;
-  margin-left: 5px;
-}
-
-.remove-button:hover {
-  height: 31px;
-}
-
-
-/*Calculate tips button */
-#calc-butt  {
-  text-align: center;
-}
-
-.calc-button {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 700; 
-  font-size: 1.2em;
-  background-color: #FA730F;
-  border-radius: 3px;
-  border-style: none;
-  color: white;
-  width: 98%;
-  height: 50px;
-}
-.calc-button:hover {
-  background-color: #F78D3F;
-}
 
 /*Placeholder styles*/
 ::-webkit-input-placeholder { font-size: .85em; }
