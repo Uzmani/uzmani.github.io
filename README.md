@@ -1,2 +1,2 @@
-# [Profolio Site](http://uzmani.github.io)
+# [Portfolio Site](http://uzmani.github.io)
  Coming soon!
